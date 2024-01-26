@@ -1,0 +1,8 @@
+--task_2_2
+CREATE TABLE IF NOT EXISTS employee_list (
+	id_employee_list SERIAL PRIMARY KEY,	
+	employee_name VARCHAR(40) NOT null UNIQUE,
+	department_name VARCHAR(40) NOT null,
+	chief_name VARCHAR(40),
+	id_chief INTEGER references employee_list(id_employee_list)
+);
